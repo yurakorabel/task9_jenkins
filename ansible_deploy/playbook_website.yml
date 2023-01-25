@@ -1,5 +1,5 @@
 ---
-- name: Update local server(slave)
+- name: Update website
   hosts: website
   become: yes
   
