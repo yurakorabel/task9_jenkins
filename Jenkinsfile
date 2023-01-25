@@ -36,12 +36,12 @@ pipeline {
 
          aborted {
             sh  ("""
-                curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*Project name*: task9_jenkins \n*Branch*: [$GIT_BRANCH](https://github.com/yurakorabel/task9_jenkins) \n*Build* : [Aborted](${BUILD_URL}consoleFull)'
+                curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*https://github.com/yurakorabel/task9_jenkins* \n *Job Name: task9_job* \n *Branch*: $GIT_BRANCH \n *Build* : [Aborted](${BUILD_URL}consoleFull)'
             """)
          }
          failure {
             sh  ("""
-                curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*Project name*: task9_jenkins \n*Branch*: [$GIT_BRANCH](https://github.com/yurakorabel/task9_jenkins) \n*Build* : [Not OK](${BUILD_URL}consoleFull)'
+                curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*https://github.com/yurakorabel/task9_jenkins* \n *Job Name: task9_job* \n *Branch*: $GIT_BRANCH \n *Build* : [Not OK](${BUILD_URL}consoleFull)'
             """)
          }
 
