@@ -1,0 +1,11 @@
+
+---
+- name: Test Connection to server
+  hosts: all
+  become: yes
+  
+  tasks:
+  
+  - name: Ping my server
+    shell: cd /var/www/html && sudo rm -rf * && git clone https://github.com/yurakorabel/jenkins_test.git && cp -fr jenkins_test/* ./ && sudo rm -rf jenkins_test/
+          
