@@ -9,18 +9,18 @@ pipeline {
                 '''
             }
         }
-    }
-    stage('play main website') {
-        when {
-            anyOf {
-                branch "main"
+        stage('play main website') {
+            when {
+                anyOf {
+                    branch "main"
+                }
             }
-        }
-        steps {
-            sh '''
-                cd ansible_deploy
-                ansible-playbook playbook_website.yml
-            '''
+            steps {
+                sh '''
+                    cd ansible_deploy
+                    ansible-playbook playbook_website.yml
+                '''
+            }
         }
     }
 }
