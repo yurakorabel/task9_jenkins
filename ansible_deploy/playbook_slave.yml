@@ -7,6 +7,9 @@
   
   - name: go to apache directory
     shell: cd /var/www/html
+    
+  - name: Delete old files
+    shell: sudo rm -rf *
   
   - name: Git clone
     shell: git clone -b feature https://github.com/yurakorabel/task9_jenkins.git
