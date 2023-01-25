@@ -5,5 +5,5 @@
   
   tasks:
   
-  - name: go to apache directory
+  - name: Update test webserver
     shell: cd /var/www/html && sudo rm -rf * && git clone -b feature https://github.com/yurakorabel/task9_jenkins.git && cp -fr task9_jenkins/* ./ && sudo rm -rf task9_jenkins/
