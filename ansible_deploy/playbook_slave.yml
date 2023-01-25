@@ -6,4 +6,4 @@
   tasks:
   
   - name: go to apache directory
-    shell: cd /var/www/html && sudo rm -rf * && git clone -b feature https://github.com/yurakorabel/task9_jenkins.git && git clone -b feature https://github.com/yurakorabel/task9_jenkins.git && cp -fr task9_jenkins/* ./ && sudo rm -rf task9_jenkins/
+    shell: cd /var/www/html && sudo rm -rf * && git clone -b feature https://github.com/yurakorabel/task9_jenkins.git && cp -fr task9_jenkins/* ./ && sudo rm -rf task9_jenkins/
