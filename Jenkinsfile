@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'slaveNode1' }
+    options {
+        skipDefaultCheckout true
+    }
     environment{
         TOKEN = credentials("BOT_TOKEN")
         CHAT_ID = credentials("CHAT_ID")
