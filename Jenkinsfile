@@ -1,8 +1,5 @@
 pipeline {
     agent { label 'slaveNode1' }
-    environment{
-       
-    }
     stages {
         stage('play slave') {
             steps {
@@ -14,17 +11,16 @@ pipeline {
         }
     }
     stage('play main website') {
-            when {
-                anyOf {
-                    branch "main"
-                }
-            }
-            steps {
-                sh '''
-                    cd ansible_deploy
-                    ansible-playbook playbook_website.yml
-                '''
+        when {
+            anyOf {
+                branch "main"
             }
         }
-
+        steps {
+            sh '''
+                cd ansible_deploy
+                ansible-playbook playbook_website.yml
+            '''
+        }
+    }
 }
