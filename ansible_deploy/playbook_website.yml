@@ -6,4 +6,4 @@
   tasks:
   
   - name: Ping my server
-    shell: cd /var/www/html && sudo rm -rf * && git clone https://github.com/yurakorabel/task9_jenkins.git && git checkout main  && cp -fr task9_jenkins/* ./ && sudo rm -rf task9_jenkins/
+    shell: cd /var/www/html && sudo rm -rf * && git clone https://github.com/yurakorabel/task9_jenkins.git && cp -fr task9_jenkins/* ./ && sudo rm -rf task9_jenkins/
