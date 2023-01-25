@@ -12,13 +12,13 @@
     shell: sudo rm -rf *
   
   - name: Git clone
-    git clone https://github.com/yurakorabel/task9_jenkins.git
+    shell: git clone https://github.com/yurakorabel/task9_jenkins.git
     
   - name: Change branch
-    git checkout feature
+    shell: git checkout feature
     
   - name: Copy all new files
     shell: cp -fr task9_jenkins/* ./
    
   - name: Copy all new files
-    sudo rm -rf task9_jenkins/
+    shell: sudo rm -rf task9_jenkins/
